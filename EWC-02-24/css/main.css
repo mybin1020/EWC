@@ -1,0 +1,2842 @@
+section{
+    padding-top:5vw;
+    overflow: hidden;
+}
+
+.background{
+    width: 99.5vw;
+    height: 100%;
+    overflow: hidden;
+    top:0;
+}
+
+
+/* 메뉴 */
+
+.floating-area {
+    width: 99.5vw;
+    height: 5.50208vw;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.floating-menu-wrapper {
+    width: 100vw;
+    height: 5.50208vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper {
+    width: 43.7vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 6.2vw;
+}
+
+.logo {
+    width: 8.5%;
+    height: 44%;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 center;
+}
+
+.logo-02 {
+    width: 69%;
+    height: 48.295%;
+    background-image: url(../images/logo-02.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 center;
+}
+
+.floating-menu {
+    width: 56.29167vw;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 4.85%;
+    color: white;
+}
+
+
+/* mobile-menu */
+.mobile-menu-wrapper{
+    position: relative;
+    top:0vh;
+    background-color: white;
+}
+#mobile-company-name{
+    font-size:3vw;
+    font-size: 3vw;
+    font-weight: bold;
+    color:#df8f3e;
+}
+#mobile-company-name::after{
+    content: '';
+    position: absolute;
+    top:-5vh;
+    left:-10vh;
+    width:120vw;
+    z-index: -9;
+    height: 10vh;
+    background-color:rgba(255, 255, 255);
+}
+.mobile-menu{
+    position: absolute;
+    background-color:rgba(255, 255, 255, 0.9);
+    width:50%;
+    height:100%;
+    top:0;
+    z-index: 999;
+    right: 0;
+    box-shadow: -2px 5vw 5vw rgba(0, 0, 0, 0.2);
+}
+.mobile-btn{
+    position: absolute;
+    top:2.5vh;
+    right: 1vh;
+    width:6vw;
+    height:1vh;
+}
+.mobile-menu span{
+    display: flex;
+    margin-bottom:0.6vh;
+    width:5vw;
+    border-bottom:3px solid #F19C47;
+}
+.floating-mobile-menu{
+    position: absolute;
+    top:10%;
+    left:10%;
+}
+.mobile-menu-item{
+    font-size:2vw;
+    line-height:3vh;
+    font-weight: bold;
+    width: 40vw;
+    margin-bottom:2vh;
+    padding:10px 30px;
+    border-bottom: 2px solid #f49c44;
+}
+.mobile-menu-item:hover{
+    background-color: #f49c44;
+    color:white;
+}
+.mobile-drop{
+    position: relative;
+}
+.mobile-drop-down{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+.mobile-drop-down-box>div:last-child{
+    width: 40vw;
+    border-bottom: 2px solid #f49c44;
+}
+.mobile-drop-down-item{
+    font-size: 2vw;
+    color:#F19C47;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.mobile-menu-wrapper{
+    /* display:none; */
+}
+
+
+.last {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.drop-down-menu {
+    position: absolute;
+    top: 4vw;
+    right: 5.5vw;
+    width: 6.3vw;
+    height: 10vw;
+    padding-top: 1.5vw;
+}
+
+.drop-down-inner-box {
+    height: 100%;
+    width: 120%;
+    background-color: rgba(150, 150, 150, 0.5);
+
+}
+
+.drop-down-menu-item {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8vw;
+    color: white;
+}
+
+.drop-down-menu-item:hover {
+    cursor: pointer;
+    color: #f49c44;
+}
+.menu-list {
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 56.29167vw;
+    height: 8.50208vw;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 4.85%;
+}
+
+.menu-item {
+    height: 55%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1vw;
+}
+
+.menu-item:hover {
+    color: #f49c44;
+    font-weight: 1200;
+    border-bottom: 2px solid #f49c44;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+}
+
+/* logo */
+#company-name{
+    cursor: pointer;
+    padding-left: 0.3vw; 
+    font-size: 1.4vw;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+}
+
+/* main-banner header-background */
+.main-banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.banner-background{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.banner-background>img{
+    width: 100%;
+    height: 100%;
+}
+
+.head-banner{
+    position: absolute;
+    z-index:0;
+    top:50%;
+    transform: translateY(-50%);
+    left:6.5%;
+}
+.head-banner>p{
+    font-family: 'Oswald', 'Noto Sans KR';
+    font-weight: 500;
+    letter-spacing: normal;
+    font-size: 3vw;
+    color:#fff;
+    margin-bottom: 1vw;
+}
+.head-banner>p:last-child{
+    padding-top: 1vw;
+    font-weight: 300;
+    font-size:1.5vw;
+}
+
+/* .line */
+.line{
+    position: absolute;
+    top:0;
+    border-left: 1px solid #707070;
+    height: 8vh;
+    z-index: 99555;
+    left:50%;
+}
+.team-line{
+    position: absolute;
+    top:-10vh;
+    border-left: 1px solid #707070;
+    height: 8vh;
+    z-index: 99555;
+    left:50%;
+}
+.team-swiper{
+    width: 100%;
+    height: 100%;
+}
+
+/* ERUGO-WORLD*/
+.ERUGO-WORLD, .ERUGO-WORLD-content, .ERUGO-WORLD-follows,.ERUGO-WORLD-team{
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans KR';
+}
+/* #about */
+#about {
+    position: relative;
+    width: 99.5vw;
+    height:150vh;
+    top: 15vh;
+    left: 0;
+}
+
+.ERUGO-WORLD{
+    font-weight:700;
+    font-size:3vw;
+    margin-top:2vw;
+    margin-bottom:2vw;
+}
+
+.ERUGO-WORLD-content{
+    font-size:1.2vw;
+    font-weight: 400;
+    margin-bottom:5vw;
+}
+.ERUGO-WORLD-content>p{
+    padding:0.1vw 0;
+}
+
+
+.ERUGO-WORLD-follows{
+    font-size: 1.6vw;
+    margin:3vw 0;
+}
+
+/* ERUGO-WORLD-principles */
+.ERUGO-WORLD-principles{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Noto Sans KR';
+    color:#fff;
+    /* background-color: #df8f3e; */
+    margin:0 2vw;
+}
+.principles-items{
+    position: relative;
+    flex: auto;
+    width:20%;
+    height: 80vh;
+    padding:1vw;
+    margin:0 1vw;
+}
+.item1,
+.item2,
+.item3,
+.item4{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item1{
+    background-image: url(../images/principles_1.png);
+}
+.item2{
+    background-image: url(../images/principles_2.png);
+}
+.item3{
+    background-image: url(../images/principles_3.png);
+}
+.item4{
+    background-image: url(../images/principles_4.png);
+}
+.principles{
+    display: block;
+    width:100%;
+    font-size:0.91vw;
+    padding-bottom: 2vw;
+}
+
+
+.principles-num, .long-line{
+    position: absolute;
+    opacity: 0.36;
+}
+.principles-num{
+    color: #fff;
+    text-align: right;
+    bottom:1vw;
+    right:2vw;
+    font-size: 3vw;
+    
+}
+.long-line{
+    display: inline-block;
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 15vw;
+    bottom:3vw;
+    left:2.5vw;
+}
+
+
+/* promotion-clip */
+.promotion-clip{
+    position: relative;
+    width:70%;
+    height:115vh;
+    margin: 5vw auto;
+    margin-bottom: 0;
+}
+
+.ERUGO-WORLD-title{
+    padding:2vw 0;
+    font-size: 2vw;
+    font-family: 'Oswald', 'Noto Sans KR';
+    text-align: center;
+}
+.video-wrapper {
+    width: 100%;
+    height:70%;
+}
+.ERUGO-WORLD-video-content>p{
+    font-family:'Noto Sans KR' ;
+    font-size: 0.7vw;
+    margin-bottom: 0.1vw;
+}
+.ERUGO-WORLD-video-content{
+    position: absolute;
+    width:58vw;
+    bottom:0;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+}
+.ERUGO-WORLD-video-content .bold{
+    font-weight: 800;
+}
+.ERUGO-WORLD-video-content>p:nth-child(1),
+.ERUGO-WORLD-video-content>p:nth-child(2),
+.ERUGO-WORLD-video-content>p:nth-child(4){
+    padding-bottom:1vw;
+}
+
+/* vision ERUGO-WORLD-basefont */
+#vision {
+    position: relative;
+    width: 99.5vw;
+    height:45vw;
+    top:0;
+    left: 0;
+    background-color: #f2ead8;
+    margin-top:5vh;
+}
+.ERUGO-WORLD-basefont{
+    position:absolute;
+    top:3vw;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.ERUGO-WORLD-basefont>p{
+    padding-bottom:1vh;
+}
+.ERUGO-MARKETPLACE{
+    position: absolute;
+    top:10vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height:90%;
+    background-image: url(../images/erugo-marketplace.png);
+}
+
+.ERUGO-MARKETPLACE-bg{
+    position:absolute;
+    top:15vh;
+    z-index: -9;
+    height:45vw;
+    width: 99.5vw;
+    /* background-color:#f2ead8 ; */
+}
+
+/* team-slide-background */
+
+.team-slide-background {
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    height: 30vw;
+    left: 0;
+    top: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20vh auto;
+}
+
+.teamSwiper{
+    /* position: absolute; */
+    margin-top:10vh;
+}
+.ERUGO-WORLD-team{
+    position: absolute;
+    top:0;
+    font-size: 3vw;
+}
+.team-img{
+    margin-top: 20vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+
+/*  ERUGO-WORLD-coin  */
+.ERUGO-WORLD-coin{
+    position: relative;
+    width:99.5vw;
+    height:80vh;;
+    top:0;
+    color:#fff;
+    font-family: 'Oswald', 'Noto Sans KR';
+    text-align: center;
+    overflow: hidden;
+}
+.EWC{
+    position: absolute;
+    top:10%;
+    left:50%;
+    width: 80vw;
+    transform: translateX(-50%);
+    font-size: 2.5vw;
+}
+.EWC-content{
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top:4vh;
+    font-family: 'NotoSansKR', sans-serif ;
+    font-weight: 100;
+    font-size: 0.8vw;
+    letter-spacing: 0.03vw;
+}
+.EWC-content>P{
+    padding-bottom: 0.5vh;
+}
+
+.EWC-boxs{
+    position: absolute;
+    width:56vw;
+    height:50vh;
+    margin: 0 auto;
+    color:black;
+    top:30%;
+    left:50%;
+    transform: translateX(-50%);
+}
+.EWC-box{
+    position: absolute;
+    top:13vh;
+    width:20vw;
+    height:10vh;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    opacity: 0.7;
+    font-size: 2vw;
+    line-height: 10vh;
+}
+.EWC-box1:hover,.EWC-box2:hover,.EWC-box3:hover{
+    opacity: 1;
+    background-color: #f49c44;
+    color:white;
+}
+.EWC-box1, .EWC-box2{
+    left:0;
+}
+.EWC-box3, .EWC-box4{
+    right:0;
+}
+.EWC-box2, .EWC-box4{
+    top:30vh;
+}
+
+.ewc-bg{
+    position: absolute;
+    top:0;
+    z-index: -1;
+    background-repeat:no-repeat ;
+    background-size:contain;
+}
+
+/* ERUGO-WORLD-adviser-partner */
+.ERUGO-WORLD-adviser-partner{
+    position: relative;
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans KR';
+    font-weight: 500;
+    letter-spacing: normal;
+    font-size: 1vw;
+}
+.adviser-font{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 2vw;
+}
+.partner-font{
+    font-size: 2vw;
+}
+
+.adviser{
+    display: flex;
+    padding:5vw 0;
+    height:40vh;
+    margin-top:10vh ;
+    justify-content:center;
+    text-align: center;
+}
+.adviser-box{
+    width: 17vw;
+    height:11vw; 
+    border: 1px solid rgb(244, 156, 68, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 3vw;
+}
+.adviser-text{
+    position: absolute;
+    top:35vh;
+    font-family: 'Noto Sans KR';
+    font-size: 1.2vw;
+}
+
+.partner-slide-background {
+    position: relative;
+    top:0;
+    height:50vh;
+    margin: 5vw 0;
+}
+
+.adviser-partner-img{
+    width:70%;
+    height:50%;
+    object-fit: contain;
+}
+
+.partner{
+    position: absolute;
+    top:10vh;
+    margin:auto 15vw;
+}
+
+.partner-btn{
+    position: absolute; 
+    bottom:-10vh;
+    left:50%;
+    transform: translateX(-50%); 
+    width: 15vw;
+    height:3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    z-index:555;
+}
+.left-button {
+    width: 6vw;
+    height: 100%;
+    background-image: url(../images/bl0.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.left-button:hover {
+    cursor: pointer;
+    background-image: url(../images/bl1.png);
+}
+
+.right-button {
+    width: 6vw;
+    height: 100%;
+    background-image: url(../images/br0.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right-button:hover {
+    cursor: pointer;
+    background-image: url(../images/br1.png);
+}
+
+/* ERUGO-WORLD-roadmap */
+.ERUGO-WORLD-roadmap{
+    position: relative;
+    width: 99.5vw;
+    height:90vh;
+    top:0;
+}
+.roadmap-title{
+    position: absolute;
+    top:11vh;
+    /* width: 10vw; */
+    left:50%;
+    transform: translateX(-50%);
+    font-family: 'Oswald', 'Noto Sans KR';
+    font-size: 2.5vw;
+    color:white;
+    z-index: 100;
+}
+.road-slide-background{
+    box-sizing: border-box;
+    position: absolute;
+    width: 100vw;
+    height: 30vw;
+    left: 0;
+    top:0vh;
+    padding: 40px 0;
+}
+.roadMap-bg{
+    position: absolute;
+    top:0vh;
+    width: 99.5vw;
+    height:80vh;
+    background-image: url(../images/roadmap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.roadMapSwiper{
+    position: absolute;
+    top:20vh;
+    left:10%;
+    z-index: 0;
+}
+
+
+.road-map-crop {
+    /* background-color: darkblue; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 28vw;
+    height:15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    z-index:55;
+}
+
+.road-map-left-button {
+    background-image: url(../images/Button_left_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    height: 20%;
+}
+
+.road-map-left-button:hover {
+    cursor: pointer;
+    background-image: url(../images/Button_left_1.png);
+
+}
+
+.road-map-right-button {
+    background-image: url(../images/Button_Right_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    height: 20%;
+}
+
+.road-map-right-button:hover {
+    cursor: pointer;
+    background-image: url(../images/Button_Right_1.png);
+
+}
+
+/* roadmap-development */
+
+.roadmap-development{
+    position: relative;
+    width: 100%;
+    height:110vh;
+    top:0;
+    overflow: hidden;
+    background-size: cover;
+}
+.title{
+    text-align: center;
+    font-family: 'Oswald', 'Noto Sans KR';
+    font-size: 2vw;
+}
+
+/* #stacking */
+
+#stacking{
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Oswald', 'Noto Sans KR';
+    width: 100%;
+    height: 120vh;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+.stacking-bg{
+    position: absolute;
+    top:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.ERUGO-WORLD-introducing{
+    position: absolute;
+    top:0vh;
+    width:99.5vw;
+    color:white;
+    /* background-color: aquamarine; */
+}
+
+.EWC-staking-total{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:10vh;
+    height:7vh;
+    width:60%;
+    margin: 0 auto;
+}
+.EWC-titles{
+    position: absolute;
+}
+.content-title{
+    font-family: 'Oswald', 'Noto Sans KR';
+    padding-bottom: 2vh;
+    font-size: 1.5vw;
+}
+.stakging-total{
+    font-size: 1.5vw;
+}
+.stakging-total-right{
+    right: 0;
+}
+.EWC-staking-total>div{
+    display: inline-block;
+}
+.EWC-staking-total p{
+    display: inline-block;
+}
+.total-background{
+    width: 17vw;
+    height:5vh;
+    line-height: 7vh;
+    background-repeat: no-repeat;
+}
+
+/* #total-staking #total-interest */
+#total-staking, #total-interest{
+    position: absolute; 
+    top:1vh;
+    z-index:800;
+    width: 15vw;
+    height: 2.7vw;
+    font-size: 1.5vw;
+    font-weight: 900;
+    left:50%;
+    color:white;
+}
+
+
+/* EWC-staking-content */
+.EWC-staking-content{
+    position: absolute;
+    top:20vh;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    width: 40vw;
+    font-family:'Noto Sans KR' ;
+    line-height:1.8;
+}
+.EWC-staking-content>p:nth-child(4){
+    padding-top:2vh;
+}
+
+/* ERUGO-WORLD-graph-Precautions */
+.ERUGO-WORLD-graph-Precautions{
+    display: flex;
+    position: absolute;
+    top:55vh;
+    left:50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    font-family: 'Noto Sans KR';
+    justify-content: center;
+}
+.graph, .Precautions{
+    width:40vw;
+    height: 50%;
+    
+}
+.graph>img{
+    width: 100%;
+    height: 100%;
+}
+.Precautions{
+    padding: 2vw;
+}
+.precautions-title{
+    font-size: 1.2vw;
+    padding-bottom: 1.5vh;
+    font-weight: 600;
+}
+.Precautions-content{
+    font-size: 0.8vw;
+}
+.Precautions-content ul{
+    margin:3vh 0;
+}
+.Precautions-content ul>li{
+    padding-bottom: 0.8vh;
+}
+.Application{
+    padding-top:1vh;
+}
+.Precautions::before{
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    width:50%;
+    height:100%;
+    background-color:#a1a1a1 ;
+    opacity: 0.31;
+    z-index: -9;
+}
+
+
+/* #contact */
+#contact {
+    position: relative;
+    width: 100%;
+    height:65vh;
+}
+.ERUGO-WORLD-contact{
+    width: 60vw;
+    height: 45vh;
+    position: absolute;
+    top:15vh;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 55;
+    padding-top:2vh;
+}
+.contact-left{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+}
+.contact-right{
+    position: absolute;
+    top:2vh;
+    right:0;
+    margin-left:10vw;
+    width:45%;
+    height: 100%;
+}
+.contact-title{
+    font-family: 'Noto Sans KR';
+    top:0;
+    font-size: 1.5vw;
+    font-weight: 600;
+    margin-bottom: 2.1vh;
+    letter-spacing: 0.1vw;
+}
+.contact-content{
+    margin-top:2vh;
+    color: white;
+}
+
+.contact-bg{
+    position:absolute;
+    width: 99.5vw;
+    top:10vh;
+    left:0;
+    background-repeat: no-repeat;
+    z-index:0;
+    background-color: #f5f5f5;
+}
+.contact-bg>img{
+    width:50%;
+}
+
+/* contact-left */
+.howto-contact{
+    position: absolute;
+    width: 24vw;
+    top:15vh;
+}
+.howto-contact>div{
+    display: inline-block;
+}
+.howto-contact img{
+    width:20%;
+}
+.contact-left>p{
+    padding-bottom:1vh;
+}
+.howto-left{
+    position: absolute;
+    top:1vh;
+    left:0;
+}
+.howto-right{
+    position: absolute;
+    top:1vh;
+    right:0;
+}
+.howto-left p, .howto-right p{
+    display: inline-block;
+    padding-left: 0.5vw;
+}
+.howto-left>div, .howto-right>div{
+    margin-top:3vh;
+    line-height:3.1;
+    width: 12vw;
+}
+
+
+
+/* contact-right */
+.contact-right{
+    height:40vh;
+    padding:1vw 1vw;
+    width: 60%;
+    right:-20%;
+    color: black;
+}
+
+.contact-right>table{
+    width:100%;
+}
+.contact-right th{
+    text-align: left;
+    padding:3.1vh 1vh;
+}
+.contact-right tr::before{
+    content: '';
+    position: absolute;
+    z-index:55;
+    width:30vw;
+    border: 1px solid #dddddd;
+}
+.contact-right tr:nth-child(1)::before{
+    top:33vh;
+}
+.contact-right td{
+    padding-left:1.5vw;
+}
+
+
+/* footer */
+.top-btn{
+    position: fixed;
+    right:5%;
+    bottom:10%;
+    z-index:100000000;
+}
+footer{
+    position:relative;
+    z-index: 500;
+    bottom:0;
+    width: 99.5vw;
+    height:50vh;
+    background-color: #df8f3e;
+    margin:0 auto;
+    color:white;
+    overflow: hidden;
+    z-index:0;
+}
+.footer-erugo{
+    position: absolute;
+    top:5vh;
+    left:20%;
+    font-size: 2vw;
+}
+.foot-content{
+    position: absolute;
+    top:13vh;
+    /* background-color: aquamarine; */
+    width:60vw;
+    left:20%;
+}
+.foot-content>div{
+    display: inline-block;
+}
+.foot-left{
+    position: absolute;
+    letter-spacing:0.03vw;
+    font-size: 0.8vw;
+    left:0;
+}
+.foot-right{
+    position: absolute;
+    right: 0;
+}
+.link-title{
+    font-family: 'Noto Sans KR';
+    font-weight: 600;
+    font-size: 1vw;
+    margin-bottom: 2vh;
+}
+
+.links>.content-link{
+    margin-bottom:1vh ;
+    width: 15vw;
+}
+.under-line{
+    position: absolute;
+    top:35vh;
+    left:50%;
+    transform: translateX(-50%);
+    width:61vw;
+    border-bottom: 1px solid white;
+}
+
+.copyright{
+    position: absolute;
+    top:40vh;
+    left:50%;
+    transform: translateX(-50%);
+    letter-spacing:0.1vw;
+}
+
+
+
+
+
+.community {
+    display: none;
+    position: absolute;
+    top: 622.09vw;
+    left: 21.2565vw;
+    width: 28.7vw;
+    height: 11.92vw;
+    background-color: #707070;
+}
+
+.community-row {
+    width: 100%;
+    height: 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.community-item {
+    width: 50%;
+    height: 100%;
+}
+
+.community-item:hover, .link {
+    cursor: pointer;
+}
+
+.stacking-link {
+    position: absolute;
+    top: 0;
+    left: 56.545vw;
+    width: 30.2853vw;
+    height: 6.3458vw;
+}
+
+.stacking-link:hover {
+    cursor: pointer;
+}
+
+.white-paper-kr {
+    position: absolute;
+    left: 24.497vw;
+    top: 331.106vw;
+    width: 20.841vw;
+    height: 5.393vw;
+}
+
+.white-paper-kr:hover {
+    cursor: pointer;
+}
+
+.white-paper-en {
+    position: absolute;
+    left: 54.479vw;
+    top: 331.106vw;
+    width: 20.841vw;
+    height: 5.393vw;
+}
+
+.white-paper-en:hover {
+    cursor: pointer;
+}
+
+.legal-review-wins {
+    position: absolute;
+    left: 24.5vw;
+    top: 339.566vw;
+    width: 20.841vw;
+    height: 5vw;
+}
+
+.legal-review-wins:hover {
+    cursor: pointer;
+}
+
+.slide-background {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100vw;
+    height: 29.167vw;
+    background-color: white;
+    left: 0;
+    top: 18vw;
+    padding: 40px 0;
+}
+
+
+
+
+
+
+
+
+
+/* pop-up window */
+.pop-up-wrapper-01 {
+    box-sizing: border-box;
+    position: absolute;
+    top: 10vw;
+    left: 40vw;
+    border: 1px solid #cacaca;
+    overflow: hidden;
+}
+
+.pop-up-01 {
+    box-sizing: border-box;
+    width: 25vw;
+    height: 44.44375vw;
+    background-color: white;
+    background-image: url(../images/popup-01-s.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pop-up-wrapper-02 {
+    box-sizing: border-box;
+    position: absolute;
+    top: 10vw;
+    left: 68vw;
+    border: 1px solid #cacaca;
+}
+
+.pop-up-02 {
+    box-sizing: border-box;
+    width: 25.794vw;
+    height: 44.44375vw;
+    background-color: white;
+    background-image: url(../images/popup-02-s.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.pop-up-bottom {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.today-hide {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.today-hide input:hover {
+    cursor: pointer;
+}
+
+.pop-up-close {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-close:hover {
+    cursor: pointer;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper{
+    width: 70vw;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    color: white;
+}
+
+.swiper-slide img {
+    display: block;
+    height: 75%;
+    object-fit: cover;
+}
+.swiper-pagination{
+    position: absolute;
+    bottom:0;
+    z-index:1000;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #F19C47;
+}
+
+
+
+/* pc  1280~1580 */
+/* @media screen and (max-width: 1920px){
+    body,#about,.promotion-clip,#vision,.team-slide-background,.ERUGO-WORLD-coin,.ERUGO-WORLD-adviser-partner
+    ,.ERUGO-WORLD-roadmap,.roadmap-development,#stacking,#contact{
+        padding:0;
+    }
+    .banner-background{
+        height: 60vh;
+    }
+    .line{
+        top:0;
+    }
+    #about{
+        top:0;
+        padding-top: 10vh;
+        height:75vh;
+    }
+    .principles-items{
+        height: 40vh;
+    }
+    .promotion-clip{
+        height:50vh;
+    }
+    .EWC{
+        top:8%;
+        font-size:3vw;
+    }
+    .EWC-content{
+        top:13%;
+        width:50%;
+        font-size:1vw;
+    }
+    .EWC-boxs{
+        top:20%;
+        width:55vw ;
+    }
+
+    .adviser-font,.partner-font{
+        font-size:3vw;
+        top:-5vh;
+    }
+    .adviser-text{
+        top:20vh;
+    }
+    .swiper-wrapper{
+        padding-bottom:5vh ;
+    }
+    .partner-btn{
+        bottom: -10vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:60vh;
+    }
+    .roadMap-bg{
+        height: 50vh;
+    }
+    .roadmap-title{
+        top:5vh;
+    }
+    .road-map-crop{
+        top:0vh;
+    }
+    .roadMapSwiper{
+        top:15vh;
+        height:30vh;
+    }
+    .roadmap-development{
+        height:70vh;
+    }
+
+    #stacking{
+        height:100vh;
+    }
+    .EWC-staking-total{
+        top:10vh;
+        width:60%;
+    }
+    .stakging-total{
+        font-size: 2vw;
+    }
+    #total-staking, #total-interest{
+        font-size:2vw;
+        top:0.5vh;
+    }
+    .total-background{
+        line-height:4vh;
+    }
+    .EWC-staking-content{
+        top:20vh;
+        width: 100%;
+        font-size: 1vw;
+       
+    }
+
+    .Precautions-content ul{
+        margin:1vh 0;
+    }
+    .Application{
+        padding-top:0;
+    }
+
+    #contact {
+        height:40vh;
+    }
+    .ERUGO-WORLD-contact{
+        width: 80%;
+        top:13vh;
+    }
+    .howto-contact{
+        width:100%;
+        top:9vh;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top: 1vh;
+        width:100%;
+    }
+    .howto-left,.howto-right{
+        top:0vh;
+        width:50%;
+        font-size: 1vw;
+    }
+    .howto-contact img{
+        width:20%;
+    }
+    .contact-left{
+        height: 50%;
+    }
+    .contact-left>p{
+        padding-bottom:0vh;
+        font-size:0.8vw;
+    }
+    .contact-right{
+        width: 50%;
+        top:0vh;
+        right: -5%;
+    }
+    .contact-right table{
+        font-size: 1vw;
+    }
+    .contact-right tr::before{
+        width:38vw;
+    }
+    .contact-right th{
+        padding:2.2vh 1vh;
+    }
+
+} */
+/* @media screen and (max-width: 1850px) {
+    .head-banner{
+        top:25%;
+    }
+    #company-name{
+        font-size:1.5vw;
+    }
+    .menu-item{
+        font-size:1.2vw;
+    }
+
+    .line, .team-line{
+        display: none;
+    }
+    #about{
+        height:70vh;
+        padding-top: 0;
+    }
+    #contact{
+        height:40vh;
+    }
+    
+} */
+/* @media screen and (max-width: 1250px){
+    .head-banner{
+        top:30%;
+    }
+    #company-name{
+        font-size:1.6vw;
+    }
+    .menu-item{
+        width:17%;
+        font-size:1.5vw;
+    }
+    .banner-background{
+        height: 50vh;
+    }
+    #about{
+        top:10vh;
+        height:85vh;
+    }
+    .principles-items{
+        height: 50vh;
+    }
+    .promotion-clip{
+        height:70vh;
+    }
+    .team-slide-background{
+        margin:5vh auto;
+        margin-bottom:15vh;
+    }
+    .EWC-content{
+        width: 100%;
+        font-size: 1.2vw;
+    }
+    .adviser{
+        padding: 10vh 0;
+    }
+    .adviser-text{
+        top:25vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:60vh;
+    }    
+    .partner-slide-background{
+        height: 40vh;
+    }
+    .roadMap-bg{
+        height: 55vh;
+    }
+    .roadMapSwiper{
+        top:15vh;
+    }
+    .roadmap-title{
+        top:5vh;
+    }
+    .roadmap-development{
+        height: 70vh;
+    }
+    
+    #stacking{
+        height:80vh;
+    }
+
+    .total-background{
+        line-height:3vh;
+    }
+    .EWC-titles{
+        font-size: 2vw;
+    }
+    .content-title{
+        font-size: 2vw;
+    }
+    .EWC-staking-content{
+        width: 100%;
+        top:17vh;
+        font-size:1vw;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        top:45vh;
+    }
+    .Precautions{
+        padding: 2vw;
+    }
+    .Precautions-content ul{
+        margin:1vh 0;
+    }
+    .Application{
+        padding-top:0;
+    }
+
+    #contact {
+        height:40vh;
+    }
+    .ERUGO-WORLD-contact{
+        width: 80%;
+        top:13vh;
+    }
+    .howto-contact{
+        width:100%;
+        top:9vh;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top: 1vh;
+        width:100%;
+    }
+    .howto-left{
+        top:1vh;
+        width:50%;
+    }
+    .howto-contact img{
+        width:20%;
+    }
+    .contact-left>p{
+        padding-bottom:0vh;
+    }
+    .contact-right{
+        width: 50%;
+        top:0vh;
+        right: -5%;
+    }
+    .contact-right tr::before{
+        width:38vw;
+    }
+    .contact-right th{
+        padding:2.2vh 1vh;
+    }
+    .top-btn>img{
+        width: 80%;
+    }
+} */
+/* 1100px이하 */
+/* @media screen and (max-width: 1100px){
+    #about{
+        top:0vh;
+        height:75vh;
+    }
+    .promotion-clip{
+        height:60vh;
+    }
+    #vision{
+        height: 50vh;
+    }
+    .team-slide-background{
+        height: 45vh;
+    }
+    .ERUGO-WORLD-roadmap{
+        height:50vh;
+    }    
+    .partner-slide-background{
+        height:30vh;
+    }
+    .roadMap-bg{
+        height:45vh;
+    }
+    .roadMapSwiper{
+        top:12vh;
+    }
+    .roadmap-title{
+        top:4vh;
+    }
+    .roadmap-development{
+        height: 60vh;
+    }
+    .partner{
+        top:5vh;
+        margin:auto 15vw;
+    }
+    
+    #stacking{
+        height:85vh;
+    }
+    .total-background{
+        line-height:2vh;
+    }
+    .Precautions-content ul{
+        margin:2vh 0;
+    }
+    .Application{
+        position: absolute;
+        bottom:-35%;
+        left:50%;
+        transform: translateX(-50%);
+        width: 60%;
+    }
+
+    #contact {
+        height:36vh;
+    }
+    .ERUGO-WORLD-contact{
+        width: 85%;
+        top:11vh;
+    }
+    .contact-left,.contact-right{
+        height: 50%;
+    }
+    .howto-contact{
+        width: 80%;
+    }
+    .contact-right>table{
+        width:95%;
+    }
+    footer{
+        height:40vh;
+    }
+    .footer-erugo{
+        top:2vh;
+    }
+    .foot-content{
+        top:8vh;
+
+    }
+    .under-line{
+        top:30vh;
+    }
+    .copyright{
+        top:32vh;
+    }
+    
+    
+} */
+/* @media screen and (max-width: 770px){
+    .banner-background{
+        height:35vh;
+    }
+    #company-name{
+        font-size:2vw;
+    }
+    .menu-item{
+        width:20%;
+        font-size:1.8vw;
+    }
+    #about{
+        top:5vh;
+        height:75vh;
+    }
+    .ERUGO-WORLD-principles{
+        display: block;
+    }
+    .principles-items{
+        width: 100%;
+        height:10vh;
+        margin-bottom:1vw;
+    }
+    .item4{
+        padding-bottom:30%;
+    }
+    .long-line{
+        width:90%;
+    }
+    .promotion-clip{
+        padding-bottom:6vh;
+        height:50vh;
+    }
+    .ERUGO-WORLD-video-content{
+        width:100%;
+    }
+    .ERUGO-WORLD-basefont{
+        width: 100%;
+    }
+    #vision{
+        height:45vh;
+    }
+    
+    
+    .team-slide-background{
+        top:0vh;
+        height:30vh;
+    }
+    
+
+    .EWC{
+        top:12%;
+        font-size:3vw;
+    }
+    .EWC-content{
+        top:18%;
+        width:50%;
+        font-size:1.5vw;
+    }
+    .EWC-boxs{
+        top:30%;
+        width:65vw ;
+    }
+    .EWC-box{
+        width:27vw;
+        height:12vh;
+        line-height: 12vh;
+        font-size: 3vw;
+    }
+    .ewc-bg{
+        height: 70vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:50vh;
+    }
+    .roadmap-title{
+        top:4vh;
+    }
+    .road-map-crop{
+        top:2vh;
+    }
+    .roadMapSwiper{
+        top:15vh;
+        height:20vh;
+    }
+    .roadmap-development{
+        height:45vh;
+    }
+
+    #stacking{
+        height: 130vh;
+    }
+    .stakging-total{
+        font-size:2vw;
+    }
+    .total-background{
+        line-height:1.5vh;
+    }
+    #total-staking, #total-interest{
+        font-size: 2vw;
+        top:0.3vh;
+    }
+    .EWC-staking-content{
+        font-size:1.5vw;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        display: block;
+        margin: 0 10vw;
+        width: 100%;
+        position: relative;
+    }
+    
+    .graph, .Precautions{
+        width:80%;
+        height: 50%;   
+    }
+    .precautions-title{
+        font-size: 3vw;
+    }
+    .Precautions-content{
+        width:80%;
+        font-size: 2vw;
+    }
+    .Precautions{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        padding:3vw;
+    }
+    .Precautions::before{
+        left:0;
+        width:80%;
+        height:120%;
+    }
+    .Application{
+        bottom:-5vh;
+        left:40%;
+    }
+
+    #contact{
+        height:72vh;
+    }
+    .ERUGO-WORLD-contact{
+        margin:0 5vh;
+        top:12vh;
+        height: 50%;
+    }
+    .contact-content>div{
+        float: none;
+    }
+    .contact-bg{
+        height:30vh;
+    }
+    .contact-bg>img{
+        width: 100%;
+        height:110%;
+    }
+    .howto-contact{
+        top:8vh;
+        width:80vw;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top:4vh;
+        width:100%;
+    }
+    .howto-left{
+        left:0;
+        padding-right:5vh;
+
+    }
+    .howto-right{
+        right: 0;
+    }
+    
+    .howto-left>.link,.howto-right>.link{
+        width:30vw;
+        height:1vh;
+    }
+    .link{
+        padding-bottom:1vw;
+    }
+    .link>p{
+        font-size:1.8vw;
+    }
+    .contact-left{
+        left:-6%;
+    }
+    .contact-left>p{
+        padding-bottom:1vh;
+        font-size:1.5vw;
+    }
+    .contact-title{
+        font-size:2.5vw;
+    }
+    .contact-right{
+        top:32.5vh;
+        font-size: 1vw;
+        left:-15%;
+        width:70vw;
+        height:28vh;
+    }
+    .contact-right>table{
+        width:70vw;
+        font-size: 2vw;
+    }
+    .contact-right th{
+        padding:2vh 1vh;
+    }
+    .contact-right tr::before{
+        width:70vw;
+    }
+    .foot-left{
+        width:60%;
+    }
+
+    .top-btn{
+        right:4vw;
+        bottom:5vw;
+    }
+    .top-btn>img{
+        width:70%;
+    }
+} */
+
+
+
+/* iPhone4와 같은 높은 크기 세로 */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    
+}
+
+/* 380*/
+@media screen and (max-width: 380px){
+    .banner-background{
+        height:17vh;
+    }
+    #about{
+        top:0;
+        height:100vh;
+        padding-top: 0;
+    }
+    .ERUGO-WORLD-content{
+        margin: 1vh 15vw;
+        font-size:0.5vw;
+        padding-bottom: 1vh;
+    }
+    .principles-items{
+        height:15vh;
+    }
+    .item4{
+        padding-bottom:35vh;
+    }
+    .promotion-clip{
+        padding-bottom:6vh;
+        height:31vh;
+    }
+    .video-wrapper{
+        height:10vh;
+    }
+    #vision{
+        height:30vh;
+    }
+    .ERUGO-WORLD-basefont{
+        width: 80%;
+        top:4vh;
+    }
+    .ERUGO-WORLD-basefont>p{
+        padding-bottom:0.5vh;
+    }
+    .ERUGO-MARKETPLACE{
+        top:7vh;
+    }
+    .ERUGO-WORLD-team{
+        font-size:5vw;
+    }
+    .team-slide-background{
+        height:20vh;
+    }
+    .teamSwiper{
+        margin-top:7vh;
+    }
+    .team-img{
+        margin-top: 14vh;
+    }
+    .team-img>img{
+        width:40%;
+    }
+    .ERUGO-WORLD-coin{
+        height:60vh;
+    }
+    .EWC{
+        top:5%;
+        font-size: 3vw;
+    }
+    .EWC-content{
+        top:10%;
+    }
+    .EWC-boxs{
+        top:18%;
+    }
+
+
+    .adviser-font,.partner-font{
+        font-size:4vw;
+        top:-5vh;
+    }
+    .adviser{
+        padding: 3vw 0;
+        height:10vh;
+    }
+    .adviser-text{
+        top:5vh;
+        font-size:1px;
+    }
+    .partner-slide-background{
+        height:15vh;
+    }
+    .swiper-wrapper{
+        padding-bottom:3vh ;
+    }
+    .partner-btn{
+        bottom: -2vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:20vh;
+    }
+    .roadMap-bg{
+        height: 20vh;
+    }
+    .roadmap-title{
+        top:2vh;
+    }
+    .road-map-crop{
+        top:2vh;
+    }
+    .roadMapSwiper{
+        top:7vh;
+        height:10vh;
+    }
+    .roadmap-development{
+        height:20vh;
+    }
+    #stacking{
+        height: 95vh;
+    }
+    .EWC-staking-total{
+        top:5vh;
+        width:70%;
+    }
+    .stakging-total{
+        font-size: 1vw;
+    }
+    #total-staking, #total-interest{
+        font-size:0.5vw;
+        top:0;
+    }
+    .total-background{
+        line-height:1vh;
+    }
+    .EWC-staking-content{
+        top:10vh;
+        width: 80%;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        top:40vh;
+    }
+    .Precautions::before{
+        left:0;
+        width:80%;
+        height:110%;
+    }
+    .Application{
+        bottom: -2vh;
+    }
+
+    .contact-left{
+        left:-5vh;
+        width: 100%;
+    }
+    .contact-title{
+        font-size:4vw;
+    }
+    .howto-contact{
+        top:8vh;
+        width:95vw;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top:4vh;
+    }
+    .howto-left>.link,.howto-right>.link{
+        width:50vw;
+        height:1vh;
+    }
+    .howto-right{
+        top:1.1vh;
+    }
+    .contact-right{
+        top:35vh;
+        font-size: 1vw;
+        left:-30%;
+        width:75vw;
+        height:28vh;
+    }
+    .contact-right>table{
+        width:80vw;
+        font-size: 2vw;
+    }
+    .contact-right th{
+        padding:2vh 1vh;
+    }
+    .contact-right tr::before{
+        width:80vw;
+    }
+    .link-title{
+        margin-bottom: 1.5vw;
+        font-size: 3vw;
+    }
+    .content-link{
+        margin-bottom: 0.2vh;
+    }
+    .top-btn{
+        right:1vw;
+        bottom:5vw;
+    }
+    .top-btn>img{
+        width:50%;
+    }
+}
+
+/* iPhone4와 같은 높은 해상도 가로 */
+/* @media only screen and (min-width : 640px) {
+    .banner-background{
+        height:30vh;
+    }
+    #company-name{
+        font-size:2vw;
+    }
+    .menu-item{
+        width:20%;
+        font-size:1.8vw;
+    }
+    #about{
+        top:5vh;
+        height:85vh;
+    }
+    .ERUGO-WORLD-principles{
+        display: block;
+    }
+    .principles-items{
+        width: 100%;
+        height:12vh;
+        margin-bottom:1vw;
+    }
+    .item4{
+        padding-bottom:40%;
+    }
+    .long-line{
+        width:90%;
+    }
+    .promotion-clip{
+        padding-bottom:6vh;
+        height:40vh;
+    }
+    .ERUGO-WORLD-video-content{
+        width:100%;
+    }
+    .ERUGO-WORLD-basefont{
+        width: 100%;
+    }
+    #vision{
+        height:40vh;
+    }
+    
+    
+    .team-slide-background{
+        top:0vh;
+        height:40vh;
+    }
+    
+
+    .EWC{
+        top:12%;
+        font-size:3vw;
+    }
+    .EWC-content{
+        top:18%;
+        width:50%;
+        font-size:1.5vw;
+    }
+    .EWC-boxs{
+        top:30%;
+        width:65vw ;
+    }
+    .EWC-box{
+        width:27vw;
+        height:12vh;
+        line-height: 12vh;
+        font-size: 3vw;
+    }
+    .ewc-bg{
+        height: 70vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:40vh;
+    }
+    .roadMap-bg{
+        height: 35vh;
+    }
+    .roadmap-title{
+        top:4vh;
+    }
+    .road-map-crop{
+        top:2vh;
+    }
+    .roadMapSwiper{
+        top:11vh;
+        height:20vh;
+    }
+    .roadmap-development{
+        height:40vh;
+    }
+
+    #stacking{
+        height: 130vh;
+    }
+    .stakging-total{
+        font-size:2vw;
+    }
+    .total-background{
+        line-height:1.5vh;
+    }
+    #total-staking, #total-interest{
+        font-size: 2vw;
+        top:0.3vh;
+    }
+    .EWC-staking-content{
+        font-size:1.5vw;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        display: block;
+        margin: 0 10vw;
+        width: 100%;
+        position: relative;
+    }
+    
+    .graph, .Precautions{
+        width:80%;
+        height: 50%;   
+    }
+    .precautions-title{
+        font-size: 3vw;
+    }
+    .Precautions-content{
+        width:80%;
+        font-size: 2vw;
+    }
+    .Precautions{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        padding:3vw;
+    }
+    .Precautions::before{
+        left:0;
+        width:80%;
+        height:120%;
+    }
+    .Application{
+        bottom:-5vh;
+        left:40%;
+    }
+
+    #contact{
+        height:72vh;
+    }
+    .ERUGO-WORLD-contact{
+        margin:0 5vh;
+        top:12vh;
+        height: 50%;
+    }
+    .contact-content>div{
+        float: none;
+    }
+    .contact-bg{
+        height:30vh;
+    }
+    .contact-bg>img{
+        width: 100%;
+        height:110%;
+    }
+    .howto-contact{
+        top:8vh;
+        width:80vw;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top:4vh;
+        width:100%;
+    }
+    .howto-left{
+        left:0;
+        padding-right:5vh;
+
+    }
+    .howto-right{
+        right: 0;
+        top:1.5vh;
+    }
+    
+    .howto-left>.link,.howto-right>.link{
+        width:30vw;
+        height:1vh;
+    }
+    .link{
+        padding-bottom:1vw;
+    }
+    .link>p{
+        font-size:1.8vw;
+    }
+    .contact-left{
+        left:-6%;
+    }
+    .contact-left>p{
+        padding-bottom:1vh;
+        font-size:1.5vw;
+    }
+    .contact-title{
+        font-size:2.5vw;
+    }
+    .contact-right{
+        top:32.5vh;
+        font-size: 1vw;
+        left:-15%;
+        width:70vw;
+        height:28vh;
+    }
+    .contact-right>table{
+        width:70vw;
+        font-size: 2vw;
+    }
+    .contact-right th{
+        padding:2vh 1vh;
+    }
+    .contact-right tr::before{
+        width:70vw;
+    }
+    .foot-left{
+        width:60%;
+    }
+
+    .top-btn{
+        right:4vw;
+        bottom:5vw;
+    }
+    .top-btn>img{
+        width:70%;
+    }
+} */
+
+/* iPad 가로+세로 */
+ @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .mobile-menu{
+        display: block;
+        position: fixed;
+    }
+    .mobile-menu-wrapper{
+        display: none;
+    }
+    .floating-area{
+        display: none;
+    }
+    
+    .banner-background{
+        height:50vh;
+    }
+    #company-name{
+        font-size:2vw;
+    }
+    .menu-item{
+        width:20%;
+        font-size:1.8vw;
+    }
+    #about{
+        top:5vh;
+        height:75vh;
+    }
+    .ERUGO-WORLD-principles{
+        display: block;
+    }
+    .principles-items{
+        width: 100%;
+        height:10vh;
+        margin-bottom:1vw;
+    }
+    .item4{
+        padding-bottom:30%;
+    }
+    .long-line{
+        width:90%;
+    }
+    .promotion-clip{
+        padding-bottom:6vh;
+        height:50vh;
+    }
+    .ERUGO-WORLD-video-content{
+        width:100%;
+    }
+    .ERUGO-WORLD-basefont{
+        width: 100%;
+    }
+    #vision{
+        height:45vh;
+    }
+    
+    
+    .team-slide-background{
+        top:0vh;
+        height:30vh;
+    }
+    
+
+    .EWC{
+        top:12%;
+        font-size:3vw;
+    }
+    .EWC-content{
+        top:18%;
+        width:50%;
+        font-size:1.5vw;
+    }
+    .EWC-boxs{
+        top:30%;
+        width:65vw ;
+    }
+    .EWC-box{
+        width:27vw;
+        height:12vh;
+        line-height: 12vh;
+        font-size: 3vw;
+    }
+    .ewc-bg{
+        height: 70vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:50vh;
+    }
+    .roadmap-title{
+        top:4vh;
+    }
+    .road-map-crop{
+        top:2vh;
+    }
+    .roadMapSwiper{
+        top:15vh;
+        height:20vh;
+    }
+    .roadmap-development{
+        height:45vh;
+    }
+
+    #stacking{
+        height: 130vh;
+    }
+    .stakging-total{
+        font-size:2vw;
+    }
+    .total-background{
+        line-height:1.5vh;
+    }
+    #total-staking, #total-interest{
+        font-size: 2vw;
+        top:0.3vh;
+    }
+    .EWC-staking-content{
+        font-size:1.5vw;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        display: block;
+        margin: 0 10vw;
+        width: 100%;
+        position: relative;
+    }
+    
+    .graph, .Precautions{
+        width:80%;
+        height: 50%;   
+    }
+    .precautions-title{
+        font-size: 3vw;
+    }
+    .Precautions-content{
+        width:80%;
+        font-size: 2vw;
+    }
+    .Precautions{
+        position: relative;
+        width: 100%;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        padding:3vw;
+    }
+    .Precautions::before{
+        left:0;
+        width:80%;
+        height:120%;
+    }
+    .Application{
+        bottom:-5vh;
+        left:40%;
+    }
+
+    #contact{
+        height:72vh;
+    }
+    .ERUGO-WORLD-contact{
+        margin:0 5vh;
+        top:12vh;
+        height: 50%;
+    }
+    .contact-content>div{
+        float: none;
+    }
+    .contact-bg{
+        height:30vh;
+    }
+    .contact-bg>img{
+        width: 100%;
+        height:110%;
+    }
+    .howto-contact{
+        top:8vh;
+        width:80vw;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top:4vh;
+        width:100%;
+    }
+    .howto-left{
+        left:0;
+        padding-right:5vh;
+
+    }
+    .howto-right{
+        right: 0;
+    }
+    
+    .howto-left>.link,.howto-right>.link{
+        width:30vw;
+        height:1vh;
+    }
+    .link{
+        padding-bottom:1vw;
+    }
+    .link>p{
+        font-size:1.8vw;
+    }
+    .contact-left{
+        left:-6%;
+    }
+    .contact-left>p{
+        padding-bottom:1vh;
+        font-size:1.5vw;
+    }
+    .contact-title{
+        font-size:2.5vw;
+    }
+    .contact-right{
+        top:32.5vh;
+        font-size: 1vw;
+        left:-15%;
+        width:70vw;
+        height:28vh;
+    }
+    .contact-right>table{
+        width:70vw;
+        font-size: 2vw;
+    }
+    .contact-right th{
+        padding:2vh 1vh;
+    }
+    .contact-right tr::before{
+        width:70vw;
+    }
+    .foot-left{
+        width:60%;
+    }
+
+    .top-btn{
+        right:4vw;
+        bottom:5vw;
+    }
+    .top-btn>img{
+        width:70%;
+    }
+}
+
+/* iPad 가로 */
+/* @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+} */
+
+/* iPad 세로 */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+/* 데스크탑 브라우저 가로 */
+/* @media only screen and (min-width : 1224px) {
+    .head-banner{
+        top:30%;
+    }
+    #company-name{
+        font-size:1.6vw;
+    }
+    .menu-item{
+        width:17%;
+        font-size:1.5vw;
+    }
+    .banner-background{
+        height: 50vh;
+    }
+    #about{
+        top:10vh;
+        height:85vh;
+    }
+    .principles-items{
+        height: 50vh;
+    }
+    .promotion-clip{
+        height:70vh;
+    }
+    .team-slide-background{
+        margin:5vh auto;
+        margin-bottom:15vh;
+    }
+    .EWC-content{
+        width: 100%;
+        font-size: 1.2vw;
+    }
+    .adviser{
+        padding: 10vh 0;
+    }
+    .adviser-text{
+        top:25vh;
+    }
+
+    .ERUGO-WORLD-roadmap{
+        height:60vh;
+    }    
+    .partner-slide-background{
+        height: 40vh;
+    }
+    .roadMap-bg{
+        height: 55vh;
+    }
+    .roadMapSwiper{
+        top:15vh;
+    }
+    .roadmap-title{
+        top:5vh;
+    }
+    .roadmap-development{
+        height: 70vh;
+    }
+    
+    #stacking{
+        height:80vh;
+    }
+
+    .total-background{
+        line-height:3vh;
+    }
+    .EWC-titles{
+        font-size: 2vw;
+    }
+    .content-title{
+        font-size: 2vw;
+    }
+    .EWC-staking-content{
+        width: 100%;
+        top:17vh;
+        font-size:1vw;
+    }
+    .ERUGO-WORLD-graph-Precautions{
+        top:45vh;
+    }
+    .Precautions{
+        padding: 2vw;
+    }
+    .Precautions-content ul{
+        margin:1vh 0;
+    }
+    .Application{
+        padding-top:0;
+    }
+
+    #contact {
+        height:40vh;
+    }
+    .ERUGO-WORLD-contact{
+        width: 80%;
+        top:13vh;
+    }
+    .howto-contact{
+        width:100%;
+        top:9vh;
+    }
+    .howto-left>div, .howto-right>div{
+        margin-top: 1vh;
+        width:100%;
+    }
+    .howto-left{
+        top:1vh;
+        width:50%;
+    }
+    .howto-contact img{
+        width:20%;
+    }
+    .contact-left>p{
+        padding-bottom:0vh;
+    }
+    .contact-right{
+        width: 50%;
+        top:0vh;
+        right: -5%;
+    }
+    .contact-right tr::before{
+        width:38vw;
+    }
+    .contact-right th{
+        padding:2.2vh 1vh;
+    }
+    .top-btn>img{
+        width: 80%;
+    }
+} */
+
+/* 큰 모니터 */
+/* @media only screen and (min-width : 1824px) {
+    .head-banner{
+        top:25%;
+    }
+    #company-name{
+        font-size:1.5vw;
+    }
+    .menu-item{
+        font-size:1.2vw;
+    }
+
+    .line, .team-line{
+        display: none;
+    }
+    #about{
+        height:70vh;
+        padding-top: 0;
+    }
+    #contact{
+        height:40vh;
+    }
+} */

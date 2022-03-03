@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust:none;
+   
+}
+html{
+    height: auto;
+    
+}
+
+/* li 장식 제거 */
+li{
+    list-style:none;
+}
+
+/* 이미지 와 글자의 정렬로 생기는 여백 제거 */
+img{
+    vertical-align:top;
+}
+/* i,em,address */
+i,em,address{
+    font-style:normal;
+}
+input,button{
+    vertical-align: bottom;
+}
+/* 기본글씨체, 크기, 줄간격, 색상 */
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.7vw;
+    color:#000;
+    width: 99.5vw;
+    position: relative !important;
+    overflow-x:hidden; 
+    overflow-y:auto;
+    height: auto;
+}
+/* section제목으로 입력한 내용을 화면에서만 사라지게, 리더리로는 읽을수 있도록 */
+.blind{
+    position:absolute;
+    top:-99999px;
+}
+
+/* 모든 자식이 float되면 부모가 사라진다, 찾기 */
+.find::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+
+hr{
+    display:none;
+}

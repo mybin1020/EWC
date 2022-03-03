@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ERUGO WORLD COIN</title>
+    <link rel="sortcut icon" href="images/erugo-logo.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/basecode.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        function linkHandler(url) {
+            //window.location.href = url
+            window.open(url)
+        }
+        function download(url) {
+            fetch(url, {
+                method: 'get',
+            })
+                .then((res) => {
+                    return res.blob()
+                })
+                .then((blob) => {
+                    let a = document.createElement('a')
+                    a.href = window.URL.createObjectURL(blob)
+                    a.download = url.split('/assets/')[1]
+                    a.click()
+                    window.URL.revokeObjectURL(a.href)
+                })
+        }
+        function goToMove(section) {
+            window.location.href = `#${section}`
+        }
+        let dropDownMenuOpen = false
+        function showDropDownMenu() {
+            let dropDownMenuStyle = document.getElementById('drop-down-menu').style
+            dropDownMenuStyle.removeProperty('display')
+        }
+        function hideDropDownMenu() {
+            let dropDownMenuStyle = document.getElementById('drop-down-menu').style
+            dropDownMenuStyle.display = 'none'
+        }
+        function openDropDownMenu() {
+            dropDownMenuOpen = true
+        }
+        function closeDropDownMenu() {
+            dropDownMenuOpen = false
+        }
+        function goToPrev(option) {
+            let swiper = swiper3
+            if (option === 'team') swiper = swiper2
+            if (option === 'roadMap') swiper = swiper1
+            swiper.slidePrev(1000, () => { console.log('callback') })
+        }
+        function goToNext(option) {
+            let swiper = swiper3
+            if (option === 'team') swiper = swiper2
+            if (option === 'roadMap') swiper = swiper1
+            swiper.slideNext(1000, () => { console.log('callback') })
+        }
+
+        // number count
+        let animationStartLine = 4.5;
+        let animationEndLine = 5.3;
+        let isAnimationPlay = false;
+        var left = 0;
+        const stakingMaxCount = 2487267;
+        const interestMaxCount = 164923;
+        const stackingInitialValue = 1800000;
+        const interestInitialValue = 120000;
+        let stacking = stackingInitialValue
+        let interest = interestInitialValue
+        let previousTime = 0;
+
+        document.addEventListener('scroll', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            var afterposition = document.documentElement.scrollTop;
+            let height = Math.floor(window.innerWidth / 10)
+            let transparent = 0
+            let scrollRatio = (afterposition / window.innerWidth)
+            if (scrollRatio > animationStartLine && scrollRatio < animationEndLine) {
+                if (!isAnimationPlay) {
+                    interest = interestInitialValue
+                    stacking = stackingInitialValue
+                    isAnimationPlay = true
+                    previousTime = (new Date).getTime()
+                }
+            } else {
+                interest = interestInitialValue
+                stacking = stackingInitialValue
+                isAnimationPlay = false
+            }
+            if (afterposition > height) {
+                transparent = 1
+                document.querySelectorAll('.menu-item').forEach((menu, idx) => {
+                    menu.style.color = 'black'
+                })
+                document.getElementById('company-name').style.color = 'black'
+            } else {
+                document.querySelectorAll('.menu-item').forEach((menu, idx) => {
+                    menu.style.color = 'white'
+                })
+                document.getElementById('company-name').style.color = 'white'
+                transparent = (afterposition / height).toFixed(2)
+            }
+            document.getElementById('floating-area').style.backgroundColor = `rgba(255,255,255,${transparent})`
+        }, false)
+
+        function formatNumber(x) {
+            var parts = x.toString().split('.')
+            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+            return parts.join('.')
+        }
+        function showPopup() { window.open("https://erugocoin.com/stacking", "a", "width=1400, height=750, left=0, top=50"); }
+
+        const hamBtn = document.querySelector(".mobile-btn");
+        hamBtn.addEventListener("click",function(){
+            hamBtn.classList.toggle('.mobile-menu-wrapper');
+        })
+    </script>
+</head>
+<body>
+    <div id="background" class="background">
+        <!-- <div class="crop-header"></div> -->
+        <div class="menu-list"></div>
+    
+        <div class="stacking-link" onclick="showPopup()"></div>
+        <div class="community">
+            <div class="community-row">
+                <div class="community-item link" onclick="linkHandler('https://t.me/erugo_offi')"></div>
+                <div class="community-item link" onclick="linkHandler('https://t.me/erugo')"></div>
+            </div>
+            <div class="community-row">
+                <div class="community-item link" onclick="linkHandler('https://open.kakao.com/o/gCeEqVzd')"></div>
+                <div class="community-item link" onclick="linkHandler('https://twitter.com/ErugoWorldCoin')"></div>
+            </div>
+            <div class="community-row">
+                <div class="community-item" onclick="linkHandler('https://blog.naver.com/erugocoin_official')"></div>
+                <div class="community-item link"
+                    onclick="linkHandler('https://www.youtube.com/channel/UCj-Hyp1afwEgmSJ6gTYx4wA')"></div>
+            </div>
+        </div>
+
+        <!-- menu -->
+        
+        <div class="head-menu">
+            <div class="floating-area" id="floating-area" style="background-color: rgba(255, 255, 255, 0);">
+                <div class="floating-menu-wrapper">
+                    <div class="logo-wrapper">
+                        <div class="logo" id="logo"></div>
+                        <div id="company-name">ERUGO WORLD COIN</div>
+                    </div>
+                    <div class="floating-menu">
+                        <div class="menu-item" onmouseover="menuItemHover()" onclick="goToMove('about')">About</div>
+                        <div class="menu-item" onclick="goToMove('vision')">Vision</div>
+                        <div class="menu-item" onclick="goToMove('stacking')">Stacking</div>
+                        <div class="menu-item" onclick="goToMove('contact')">Contact</div>
+                        <div class="menu-item last" onmouseover="openDropDownMenu()"
+                            onmouseleave="closeDropDownMenu()">
+                            GetEWC
+                            <i class="fa fa-caret-down" style="font-size: 1.2vw;"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="drop-down-menu" id="drop-down-menu" style="display: none;" onmouseover="openDropDownMenu()"
+                    onmouseleave="closeDropDownMenu()">
+                    <div class="drop-down-inner-box">
+                        <div class="drop-down-menu-item link" onclick="linkHandler('https://global.bittrex.com/Market/Index?MarketName=USDT-EWC')">Bittrex</div>
+                        <div class="drop-down-menu-item link" onclick="linkHandler('https://www.btrade.co.kr/trade/trade.do?code=EWC-BTC')">Btrade</div>
+                        <div class="drop-down-menu-item link" onclick="linkHandler('https://www.tennten.com/trade?code=USDT-EWC&tabindex=2')">TenTen</div>
+                        <div class="drop-down-menu-item link" onclick="linkHandler('https://www.coinutop.com/trade?code=USDT-EWC')">CoinUtop</div>
+                        <div class="drop-down-menu-item link" onclick="linkHandler('https://www.xt.com/tradePro/ewc_usdt')">XT.COM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                
+                <div class="mobile-menu-wrapper">
+                    <div class="mobile-logo-wrapper">
+                        <div class="logo" id="logo"></div>
+                        <div id="mobile-company-name">ERUGO WORLD COIN</div>
+                    </div>
+                    <div class="mobile-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="floating-mobile-menu">
+                    <div class="mobile-menu-item" onmouseover="menuItemHover()" onclick="goToMove('about')">About</div>
+                    <div class="mobile-menu-item" onclick="goToMove('vision')">Vision</div>
+                    <div class="mobile-menu-item" onclick="goToMove('stacking')">Stacking</div>
+                    <div class="mobile-menu-item" onclick="goToMove('contact')">Contact</div>
+                    <div class="mobile-menu-item mobile-drop" > GetEWC </div>
+                    <div class="mobile-drop-down" id="mobile-drop-down">
+                        <div class="mobile-drop-down-box">
+                            <div class="mobile-drop-down-item link" onclick="linkHandler('https://global.bittrex.com/Market/Index?MarketName=USDT-EWC')">Bittrex</div>
+                            <div class="mobile-drop-down-item link" onclick="linkHandler('https://www.btrade.co.kr/trade/trade.do?code=EWC-BTC')">Btrade</div>
+                            <div class="mobile-drop-down-item link" onclick="linkHandler('https://www.tennten.com/trade?code=USDT-EWC&tabindex=2')">TenTen</div>
+                            <div class="mobile-drop-down-item link" onclick="linkHandler('https://www.coinutop.com/trade?code=USDT-EWC')">CoinUtop</div>
+                            <div class="mobile-drop-down-item link" onclick="linkHandler('https://www.xt.com/tradePro/ewc_usdt')">XT.COM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- main-banner -->
+        <div class="main-banner">
+            <div class="banner-background"><img src="images/main-banner.png" alt="mainbanner"></div>
+            <div class="head-banner">
+                <p>The strong link between the virtual and reality,</p>
+                <p>ERUGO WORLD COIN will be a strong crypto assets that</p>
+                <p>connects Metaverse with reality.</p>
+                <p>ERUGO will be core of the metaverse.</p>
+            </div>
+        </div>
+
+
+        <!-- about  -->
+        <section id="about" >
+            <div class="line"></div>
+            <h2 class="ERUGO-WORLD">ERUGO WORLD</h2>
+    
+            <div class="ERUGO-WORLD-content">
+                <p>To overcome the limitation of previous mass-type Metaverse platforms that only focus on the value of digital</p>
+                <p>assets and transaction volumes, ERUGO WORLD aims to be the sustainable Metaverse platform which connects</p>
+                <p>with reality by providing valuable services to our investors.</p>
+            </div>
+
+            <h3 class="ERUGO-WORLD-follows">The Metaverse that ERUGO WORLD pursue follows principles.</h3>
+            <div class="ERUGO-WORLD-principles">
+                <div class="principles-items item1">
+                    <span class="principles">Create a low barrier to entry in which anyone can easily participate</span>
+                    <span class="principles-content">
+                        In general, Metaverse and NFT-related platform games adopt a method that enables actual start only when you purchase essential 
+                        items with virtual assets in the marketplace in the first game. However, ERUGO World makes it possible to secure coins (virtual assets) 
+                        for living in virtual reality through the quest given within Metaverse.
+                    </span>
+                    <span class="principles-num">1</span>
+                    <span class="long-line"></span>
+                </div>
+                <div class="principles-items item2">
+                    <span class="principles">Create an economic ecosystem operated and developed on its own</span>
+                    <span>
+                        In ERUGO World aiming to construct its own economic ecosystem, you can conduct economic activities like the real world. For example, 
+                        you can hire other users for construction and pay salaries, secure coins by providing labor, and provide intelligent services to design 
+                        other users' houses and secure coins. Rather than just playing for no purpose, people can “live” with a job just like in reality.
+                    </span>
+                    <span class="principles-num">2</span>
+                    <span class="long-line"></span>
+                </div>
+                <div class="principles-items item3">
+                    <span class="principles">Seek a stronger connection with reality</span>
+                    <span>
+                        Focus on the connection with reality, a characteristic of Metaverse. Not just simply watching a performance and decorating an avatar, it 
+                        increases the immersion in the life of Metaverse by linking with various offline businesses. For example, if you refuel a vehicle in 
+                        Metaverse to increase your abilities, you can receive a refueling voucher through SNS in real life, or if you buy and drink soda in real 
+                        life, your avatar in Metaverse can also drink the same soda.
+                    </span>
+                    <span class="principles-num">3</span>
+                    <span class="long-line"></span>
+                </div>
+                <div class="principles-items item4">
+                    <span class="principles">Activate the metaverse economic ecosystem through collaboration with companies</span>
+                    <span>
+                        Various companies' showrooms, billboards, experience halls, and SHOPs can be entered in the map of ERUGO World, which is made similar to the earth of the real 
+                        world. At this time, the entering companies pay the entrance fee and advertising cost with coins, and the coins secured in this way are accumulated and paid to 
+                        users as a reward for quests or used for the development of the ecosystem.
+                        <br>
+                        The ERUGO Team defines the above four as the team's mission and attempts to achieve innovation through the linkage between Metaverse and reality by 
+                        implementing them through blockchain technology. So far, the ERUGO Team has listed Erugo World Coin (EWC) on the exchange, and has been preparing for a gas 
+                        station business, internet shopping mall, new concept laundry app business, and construction business to link with Erugo World.
+                        <br>
+                        The ERUGO Team devised the “ERUGO World Ecosystem Model” to successfully implement these missions. This model will enable companies and users joining the 
+                        ERUGO World to enjoy life in the strongly integrated virtual world and real world and will create the ERUGO World ecosystem to establish itself as a block chain 
+                        project that encompasses not only Korea but also the world.
+                    </span>
+                    <span class="principles-num">4</span>
+                    <span class="long-line"></span>
+                </div>
+            </div>
+
+        </section>
+        <!-- promotion-clip -->
+        <div class="promotion-clip">
+            <h2 class="ERUGO-WORLD-title">ERUGO WORLD and EWC Promotion clip</h2>
+            <div class="video-wrapper">
+                <!--<video src="/assets/marketing.mp4" style="width: 100%; height: 100%;" controls muted autoplay></video>-->
+                <iframe id="player" type="text/html" style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/u-vHf6TX0k8" frameborder="0"></iframe>
+            </div>
+            <div class="ERUGO-WORLD-video-content">
+                <p><span class="bold">ERUGO WORLD COIN</span> is the digital asset which can be transacted to invest on real estates, products, services, and items in the Metaverse.</p>
+                <p><span class="bold">Rugo,</span> is the token issued and distributed by ERUGO WORLD based on EWC (ERUGO WORLD COIN).</p>
+                <p>Token acquired by various work and effort in Metaverse can be exchanged and deposited into EWC anytime, and <span class="bold">finally it is possible to cashify by disposing of the EWC.</span></p>
+                <p>Also, the entry cost, advertising cost and sales incentives compensated by the businesses in EROGO WORLD are transacted and operated in Rugo and will be the source to power the ecosystem of ERUGO WORLD.</p>
+            </div>
+        </div>
+        
+        <!-- vision -->
+        <section id="vision">
+            <h2 class="blind">ERUGO-MARKETPLACE</h2>
+            <div class="ERUGO-WORLD-basefont">
+                <p>To overcome the limitation of previous mass-type Metaverse platforms that only focus on the value of digital</p>
+                <p>assets and transaction volumes, ERUGO WORLD aims to be the sustainable Metaverse platform which connects</p>
+                <p>with reality by providing valuable services to our investors.</p>
+            </div>
+            <div class="ERUGO-MARKETPLACE"></div>
+            <div class="ERUGO-MARKETPLACE-bg"></div>
+        </section>
+        
+        <!-- 팀소개 -->
+        <div class="team-slide-background">
+            <div class="team-line"></div>
+            <h2 class="ERUGO-WORLD-team">Erugo Technical Team</h2>
+            <div class="team-img">
+                <img src="/images/Button_left_1.png" alt="left button" onclick="goToPrev('team')"/>
+            </div>
+            <div class="team-swiper">
+                <div class="swiper teamSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide erugo-team"><img src="/images/Team1.png" alt="CEO Jung-su-Kim"/></div>
+                        <!-- <div class="swiper-slide erugo-team"><img src="/images/Team2.jpg" alt="CTO Woo-sung-Joo"/></div> -->
+                        <div class="swiper-slide erugo-team"><img src="/images/Team3.png" alt="Design-team Jeong-A-Jin, Yu-Jin-Lee, Tae-Hyun-Kim, Beatriz-Carnicero-Munilla"/></div>
+                        <div class="swiper-slide erugo-team"><img src="/images/Team4.png" alt="Developement-team Joung-honn-Lee, Hee-jong-Ka, Hee-Sung-Lee, Su-Bin-Choi"/></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="team-img">
+                <img src="/images/Button_Right_1.png" alt="right button" class="team-slide-right-button" onclick="goToNext('team')" />
+            </div>
+        </div>
+
+        <!-- 이루고코인 다운로드 -->
+        <div class="ERUGO-WORLD-coin">
+            <h2 class="EWC">ERUGO WORLD COIN, The new concept of digital assets.</h2>
+            <div class="EWC-content">
+                <p>ERUGO WORLD with &#39;ERUGO WORLD Ecosystem Model&#39; which connects Metaverse, business and user</p>
+                <p>based on blockchain pursues sustainable growth via an independent economic ecosystem.</p>
+            </div>
+            <div class="EWC-boxs">
+                <div class="EWC-box EWC-box1 link" onclick="download('/assets/210924+EWC_WhitePaper+Kor.pdf')">White paper(KOR)</div>
+                <div class="EWC-box EWC-box2 link" onclick="download('/assets/210930+WC(Wins).pdf')">Legal review(Wins)</div>
+                <div class="EWC-box EWC-box3 link" onclick="download('/assets/210924+EWC_WhitePaper+Eng.pdf')">White paper(ENG)</div>
+                <div class="EWC-box EWC-box4">Legal review(J.W)</div>
+            </div>
+            <div class="ewc-bg"><img src="images/ERUGO-WORLD-coin-img.png" alt="ERUGO-WORLD-coin-img"></div>
+        </div>
+
+        <!-- adviser, partner -->
+        <div class="ERUGO-WORLD-adviser-partner">
+            <div class="adviser">
+                <h2 class="adviser-font">Adviser</h2>
+                <div class="adviser-box">
+                    <img src="images/Adviser_1.png" alt="Law firm &#39;Jaewon&#39;" class="adviser-partner-img">
+                    <p class="adviser-text">Law firm ‘Jaewon’</p>
+                </div>
+                <div class="adviser-box">
+                    <img src="images/Adviser_2.png" alt="Tax corporation &#39;Dasol&#39;" class="adviser-partner-img">
+                    <p class="adviser-text">Tax corporation ‘Dasol’</p>
+                </div>
+                <div class="adviser-box">
+                    <img src="images/Adviser_3.png" alt="Law firm &#39;Wins&#39;" class="adviser-partner-img">
+                    <p class="adviser-text">Law firm ‘Wins’</p>
+                </div>
+            </div>
+
+            <div class="partner-slide-background">
+                <h2 class="partner-font">Partner</h2>
+                <div class="partner">
+                    <div class="swiper partnerSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide partner-h">
+                                <div class="adviser-box">
+                                    <img src="images/Partner_1.png" alt="haechi labs" style="width:70%;height: 50%;object-fit: contain;" />
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide partner-h">
+                                <div class="adviser-box">
+                                    <img src="images/Partner_2.png" alt="infillinge" style="width:70%;height: 50%;object-fit: contain;" />
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide partner-h">
+                                <div class="adviser-box">
+                                    <img src="images/Partner_3.png" alt="erugo asset management" style="width:70%;height: 50%;object-fit: contain;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="partner-btn">
+                        <div class="left-button" onclick="goToPrev('')"></div>
+                        <div class="right-button" onclick="goToNext('')"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- 이루고 연혁 -->
+        <div class="ERUGO-WORLD-roadmap">
+            <h2 class="roadmap-title">Road Map of Listing in 2022</h2>
+
+            <div class="road-map-crop">
+                <div class="road-map-left-button" onclick="goToPrev('roadMap')"></div>
+                <div class="road-map-right-button" onclick="goToNext('roadMap')"></div>
+            </div>
+
+            <div class="road-slide-background">
+                <div class="roadMap-bg"></div>
+                <div class="swiper roadMapSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/roadmap1.png" alt="Btrade" /></div>
+                        <div class="swiper-slide"><img src="/images/roadmap2.png" alt="TENNTEN" /></div>
+                        <div class="swiper-slide"><img src="/images/roadmap3.png" alt="coinUtop" /></div>
+                        <div class="swiper-slide"><img src="/images/roadmap4.png" alt="XT.COM" /></div>
+                        <div class="swiper-slide"><img src="/images/roadmap5.jpg" alt="BITTREX" /></div>
+                    </div>
+                    <div class="swiper-pagination page-blind"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 발전과정 -->
+        <div class="roadmap-development">
+            <h2 class="title"> Road Map of Metaverse ‘Erugo World' Development’</h2>
+            <div class="roadmap-img"><img src="images/erugo-world-development.png" alt="Road Map of Metaverse ‘Erugo World' Development’" style="width: 100%; height: 100%;" ></div>
+        </div>
+
+        <!-- stacking -->
+        <section id="stacking">
+            <h2 class="blind">Introducing EWC Staking</h2>
+            <div class="stacking-bg"><img src="images/staking-back-img.png" alt="Introducing EWC Staking backgroundimg" ></div>
+            <div class="ERUGO-WORLD-introducing">
+
+                <div class="EWC-staking-total find">
+                    <div class="stakging-total-left EWC-titles">
+                        <p class="stakging-total">Total Staking</p>
+                        <p class="total-background"><img src="images/staking-num-img.png" alt="Total Staking" style="width: 90%;"></p>
+                        <div id="total-staking"></div>
+                    </div>
+                    <div class="stakging-total-right EWC-titles">
+                        <p class="stakging-total">Total Interest</p>
+                        <p class="total-background"><img src="images/staking-num-img.png" alt="Total Interest" style="width: 90%;"></p>
+                        <div id="total-interest"></div>
+                    </div>
+                </div>
+
+                <div class="EWC-staking-content">
+                    <h3 class="content-title">Introducing EWC Staking</h3>
+                    <p>For the purpose of sustaining the stable development of the EWC ecosystem,</p>
+                    <p>the security wallet user will be rewarded when the user deposits the EWC for a promised period.</p>
+                    <p>Automatic reward calculated as below will be transferred to the user account when the security wallet user deposits EWC.</p>
+                    <p>12 months = 6% / year (0.5% / month), 9 months = 4.5% / year (0.375% / month), 6 months = 3% / year (0.25% / month),</p>
+                    <p>The minimum deposit start at 5,000. Coins will be deposited in the user’s account. fixed rewards will be installment</p>
+                    <p>payment will be processed in ERUGO WORLD COIN (EWC).</p>
+                </div>
+
+                <div class="ERUGO-WORLD-graph-Precautions">
+                    <div class="graph">
+                        <img src="images/graph-img.png" alt="Interest rate">
+                    </div>
+                    <div class="Precautions">
+                        <div class="precautions-title">Precautions upon Staking Option Selection</div>
+                        <div class="Precautions-content">
+                            <p>Before applying for the staking option, EWC deposited in Tennten or</p>
+                            <p>Btrade account must be transferred to the security wallet.</p>
+                            <p class="link" onclick="linkHandler('https://www.securitywallet.co.kr/')">(https://www.securitywallet.co.kr/)</p>
+                            <ul>
+                                <li>- Withdrawal will be blocked during the promised deposit period.</li>
+                                <li>- The value of EWC may fluctuate during the promised deposit period.</li>
+                                <li>- Coins will be stored and saved in the user’s account during the promised deposit period.</li>
+                                <li>- EWC will be rewarded as a contribution to the stabilization of the ecosystem.</li>
+                            </ul>
+                            <div class="Application">
+                                <div class="link" onclick="showPopup()"><img src="images/application-btn.png" alt="Application form for EWC Staking" style="width:100%"></div>
+                                <!-- Application form for EWC Staking.연결 -->
+                            </div>
+                            
+                        </div>
+                        <div class="text-box"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- contact -->
+        <section id="contact">
+            <h2 class="blind">ERUGO-WORLD-contact</h2>
+            <div class="ERUGO-WORLD-contact">
+                <div class="contact-content find">
+                    <div class="contact-left">
+                        <h2 class="contact-title">CONTACT</h2>
+                        <p>If you have any questions or inquiries, please contact</p>
+                        <p>the following contact information.</p>
+                        <div class="howto-contact">
+                            <div class="howto-left">
+                                <div class="link" onclick="linkHandler('https://www.securitywallet.co.kr/')">
+                                    <img src="images/icon1.png" alt="Telegram Channel">
+                                    <p>Telegram Channel</p>
+                                </div>
+                                <div class="link" onclick="linkHandler('https://open.kakao.com/o/gCeEqVzd')">
+                                    <img src="images/icon2.png" alt="KaKaotalk Open Chatting">
+                                    <p>KaKaotalk Open Chatting</p>
+                                </div>
+                                <div class="link" onclick="linkHandler('https://blog.naver.com/erugocoin_official')">
+                                    <img src="images/icon3.png" alt="Official Blog">
+                                    <p>Official Blog</p>
+                                </div>
+                            </div>
+                            
+                            <div class="howto-right">
+                                <div class="link" onclick="linkHandler('https://t.me/erugo')">
+                                    <img src="images/icon4.png" alt="Telegram Community">
+                                    <p>Telegram Community</p>
+                                </div>
+                                <div class="link" onclick="linkHandler('https://twitter.com/ErugoWorldCoin')">
+                                    <img src="images/icon5.png" alt="Official Twitter">
+                                    <p>Official Twitter</p>
+                                </div>
+                                <div class="link" onclick="linkHandler('https://www.youtube.com/channel/UCj-Hyp1afwEgmSJ6gTYx4wA')">
+                                    <img src="images/icon6.png" alt="Official Youtube Channel">
+                                    <p>Official Youtube Channel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <table>
+                            <tr>
+                                <th>Address</th>
+                                <td><address>129, Seochojungang-ro 8-gil, Gangnam-gu, Seoul, Republic of Korea</address></td>
+                            </tr>
+                            <tr>
+                                <th>Phone Number</th>
+                                <td>+82 2 545 0265</td>
+                            </tr>
+                            <tr>
+                                <th>E-Mail</th>
+                                <td>erugo@erugoworld.com</td>
+                            </tr>
+                            <tr>
+                                <th>FAX</th>
+                                <td>+82 2 6008 0265</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-bg"><img src="images/contact-img.png" alt="contact-img"  ></div>
+        </section>
+
+        <!-- 하단영역 -->
+        <footer>
+            <div class="top-btn link" onclick="window.scrollTo(0,0);"><img src="images/top-btn.png" alt="up button"></div>
+            <h2 class="footer-erugo">Erugo</h2>
+            <div class="foot-content">
+                <div class="foot-left">If you're curious about more business areas, please visit by clicking the link on the right.</div>
+                <div class="foot-right">
+                    <div class="link-title">Links</div>
+                    <div class="links">
+                        <div class="link content-link" onclick="linkHandler('https://www.erugoworld.co.kr/')">Erugo Asset Management</div>
+                        <div class="link content-link" onclick="linkHandler('https://www.erugoworld.co.kr/invest.html')">Erugo Investment & Development Group</div>
+                        <div class="link content-link" onclick="linkHandler('https://www.erugoworld.co.kr/world.html')">Erugo World</div>
+                        <div class="link content-link" onclick="linkHandler('https://coinmarketcap.com/ko/currencies/erugo-world-coin/')">CoinMarketCap</div>
+                        <div class="link content-link" onclick="linkHandler('https://www.coingecko.com/ko/%EC%BD%94%EC%9D%B8/erugo-world-coin')">CoinGecko</div>
+                    </div>
+                </div>
+            </div>
+            <div class="under-line"></div>
+            <div class="copyright">Copyright © 2021 ERUGO World Coin All Right reserved</div>
+        </footer>
+    </div>
+
+    <!-- pop-up 창 -->
+    <div class="pop-up-wrapper-01" id="pop-up-01">
+        <!-- class랑 id 이름 동일 -->
+        <div class="pop-up-01"> </div> 
+        <div class="pop-up-bottom">
+            <div class="today-hide">Close for a day<div class="pointer" id="pop-up-01-today-hide"
+                    style="display:inline-block;width:1vw;height:1vw;border:1px solid gray;border-radius:0.2vw;"></div>
+            </div>
+            <div class="pop-up-close" id="pop-up-01-close">Close</div>
+        </div>
+    </div>
+    <div class="pop-up-wrapper-02" id="pop-up-02">
+        <!-- class랑 id 이름 동일 -->
+        <div class="pop-up-02"> </div>
+        <div class="pop-up-bottom">
+            <div class="today-hide">Close for a day<div class="pointer" id="pop-up-02-today-hide"
+                    style="display:inline-block;width:1vw;height:1vw;border:1px solid gray;border-radius:0.2vw;"></div>
+            </div>
+            <div class="pop-up-close" id="pop-up-02-close">Close</div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        let popup01TodayHide = Number(window.localStorage.getItem('popup01'))
+        let popup02TodayHide = Number(window.localStorage.getItem('popup02'))
+
+        let background = document.getElementById('background')
+        background.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            let backgroundHeight = window.innerHeight
+            let backgroundWidth = window.innerWidth
+            console.log(`X : ${e.pageX * 100 / backgroundWidth}`)
+            console.log(`Y : ${e.pageY * 100 / backgroundWidth}`)
+        }, false)
+        var swiper1 = new Swiper(".roadMapSwiper", {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            }
+        });
+        var swiper2 = new Swiper(".teamSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            nav: {
+                prevEl: 'team-slide-left-button',
+                nextEl: 'team-slide-right-button'
+            },
+            observer: true,
+            observeParents: true,
+            parallax: true,
+            breakpoints: { 
+                // 화면의 넓이가 320px 이상일 때 
+                200: { 
+                    slidesPerView: 1,
+                    spaceBetween:60 
+                }, 
+                750: { 
+                    slidesPerView: 2,
+                    spaceBetween: 20 
+                }, 
+                // 화면의 넓이가 640px 이상일 때 
+                1199: {
+                    slidesPerView: 3, 
+                    spaceBetween: 40 
+                }
+            }
+
+        });
+        var swiper3 = new Swiper(".partnerSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        });
+        let popup01 = document.getElementById('pop-up-01')
+        let popup02 = document.getElementById('pop-up-02')
+        let popup01CloseButton = document.getElementById('pop-up-01-close')
+        let popup02CloseButton = document.getElementById('pop-up-02-close')
+        let popup01TodayHideButton = document.getElementById('pop-up-01-today-hide')
+        let popup02TodayHideButton = document.getElementById('pop-up-02-today-hide')
+
+        let oneday = 1000 * 60 * 60 * 24
+        if (popup01TodayHide) {
+            let now = (new Date()).getTime()
+            if ((now - popup01TodayHide) < oneday) {
+                popup01.style.display = 'none'
+            }
+        }
+        if (popup02TodayHide) {
+            let now = (new Date()).getTime()
+            if ((now - popup02TodayHide) < oneday) {
+                popup02.style.display = 'none'
+            }
+        }
+
+        popup01CloseButton.addEventListener('click', (e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            popup01.style.display = 'none'
+        }, false)
+        popup02CloseButton.addEventListener('click', (e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            popup02.style.display = 'none'
+        }, false)
+        popup01TodayHideButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            e.target.style.backgroundColor = 'rgba(0,0,255,0.6)'
+            setTimeout(() => {
+                window.localStorage.setItem('popup01', (new Date()).getTime())
+                popup01.style.display = 'none'
+            }, 500)
+        }, false)
+        popup02TodayHideButton.addEventListener('click', (e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            e.target.style.backgroundColor = 'rgba(0,0,255,0.6)'
+            setTimeout(() => {
+                window.localStorage.setItem('popup02', (new Date()).getTime())
+                popup02.style.display = 'none'
+            }, 500)
+        }, false)
+
+
+
+        let totalStaking = document.getElementById('total-staking')
+        let totalInterest = document.getElementById('total-interest')
+        setInterval(() => {
+            if (dropDownMenuOpen) {
+                showDropDownMenu()
+            } else {
+                hideDropDownMenu()
+            }
+            if (isAnimationPlay) {
+                let currentTime = (new Date()).getTime()
+                let timeGap = Math.floor(currentTime - previousTime)
+                if (timeGap > 50) {
+                    previousTime = currentTime
+                    if (stacking <= stakingMaxCount) {
+                        totalStaking.innerHTML = formatNumber(Math.ceil(stacking))
+                        stacking = stacking + (stakingMaxCount - stacking) / Math.ceil(stakingMaxCount / 150000) + 0.1
+                    }
+                    if (interest <= interestMaxCount) {
+                        totalInterest.innerHTML = formatNumber(Math.ceil(interest))
+                        interest = interest + (interestMaxCount - interest) / Math.ceil(interestMaxCount / 6000) + 0.1
+                    }
+                }
+            }
+        }, 5)
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 300){
+                $('.top-btn').show();
+            } else{
+                $('.top-btn').hide();
+            }
+        });
+        $('.top-btn').click(function(){
+            $('html, body').animate({scrollTop:0},400);
+            return false;
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
